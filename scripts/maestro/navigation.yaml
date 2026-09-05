@@ -1,0 +1,23 @@
+appId: dev.appllama.liquidglass
+---
+# Cold deep links must honor state=open, and the primary action returns home.
+- stopApp
+- openLink: "liquid-glass://sky?state=open"
+- extendedWaitUntil:
+    visible: "Let’s go"
+    timeout: 20000
+- tapOn: "Let’s go"
+- assertVisible:
+    id: "cookbook-sky"
+- assertVisible:
+    id: "cookbook-astro"
+- stopApp
+- openLink: "liquid-glass://astro?state=open"
+- extendedWaitUntil:
+    visible: "Let’s go"
+    timeout: 20000
+- tapOn: "Let’s go"
+- assertVisible:
+    id: "cookbook-sky"
+- assertVisible:
+    id: "cookbook-astro"

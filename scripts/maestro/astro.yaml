@@ -19,9 +19,11 @@ appId: dev.appllama.liquidglass
 - swipe: { start: "50%,78%", end: "50%,22%", duration: 620 }
 - evalScript: ${ var t = Date.now(); while (Date.now() - t < 6000) {}; output.e = 1 }
 - takeScreenshot: astro-open
+- assertVisible: "Let’s go"
 # a partial pull down that springs back
 - swipe: { start: "50%,47%", end: "56%,64%", duration: 700 }
 - evalScript: ${ var t = Date.now(); while (Date.now() - t < 2500) {}; output.f = 1 }
 # the full return
 - swipe: { start: "50%,47%", end: "50%,80%", duration: 600 }
 - evalScript: ${ var t = Date.now(); while (Date.now() - t < 4000) {}; output.g = 1 }
+- assertNotVisible: "Let’s go"

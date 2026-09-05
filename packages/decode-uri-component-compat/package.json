@@ -1,0 +1,11 @@
+{
+  "name": "@appllama/decode-uri-component-compat",
+  "version": "0.5.0",
+  "private": true,
+  "description": "CommonJS compatibility for the patched URI decoder used by Expo Router.",
+  "license": "GPL-3.0-only",
+  "main": "index.cjs",
+  "dependencies": {
+    "upstream-decoder": "npm:decode-uri-component@0.5.0"
+  }
+}

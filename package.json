@@ -58,6 +58,7 @@
     "assets/images/liquid-glass-icon.png",
     "assets/images/liquid-glass-favicon.png",
     "docs",
+    "packages",
     "prompts",
     "src/index.ts",
     "src/liquid-glass",
@@ -94,6 +95,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "decode-uri-component": "file:packages/decode-uri-component-compat",
     "eslint": "^9.0.0",
     "eslint-config-expo": "~57.0.1",
     "typescript": "~6.0.3"
@@ -104,6 +106,13 @@
     "ios": "expo run:ios",
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run typecheck && npm run lint"
+    "verify": "npm run typecheck && npm run lint && npm run test:dependencies",
+    "test:dependencies": "node --test tests/dependency-compatibility.test.cjs"
+  },
+  "overrides": {
+    "decode-uri-component": "$decode-uri-component",
+    "xcode": {
+      "uuid": "11.1.1"
+    }
   }
 }

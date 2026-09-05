@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Appllama/liquid-glass-screens/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Appllama/liquid-glass-screens/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/Appllama/liquid-glass-screens/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Appllama/liquid-glass-screens/actions/workflows/ci.yml/badge.svg?branch=main&amp;event=push"></a>
   <img alt="Expo SDK 57" src="https://img.shields.io/badge/Expo_SDK-57-000020?logo=expo&logoColor=white">
   <img alt="React Native 0.86" src="https://img.shields.io/badge/React_Native-0.86-61DAFB?logo=react&logoColor=111827">
   <img alt="React Native Skia" src="https://img.shields.io/badge/Skia-2.6-0A0C14">
@@ -311,8 +311,11 @@ npm run verify
 
 The verification command runs:
 
-1. TypeScript with <code>tsc --noEmit</code>; and
-2. Expo ESLint.
+1. TypeScript with <code>tsc --noEmit</code>;
+2. Expo ESLint; and
+3. dependency compatibility tests for routing, malformed URI input, and Xcode project identifiers.
+
+CI also runs <code>npm audit --audit-level=moderate</code>. The scoped security overrides and their compatibility checks are documented in [<code>docs/DEPENDENCIES.md</code>](./docs/DEPENDENCIES.md).
 
 The same gates run in [GitHub Actions](./.github/workflows/ci.yml). There is no web export: the screens depend on Skia runtime shaders and native video decoding. The interactions were verified in the iPhone simulator with the Maestro flows in [`scripts/maestro/`](./scripts/maestro), recorded at a constant 60 fps with [`scripts/simrec.sh`](./scripts/simrec.sh) and scrubbed frame by frame.
 
