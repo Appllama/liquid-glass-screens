@@ -1,0 +1,153 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies and package artifacts
+node_modules/
+.npm/
+*.tgz
+
+# Expo and web exports
+.expo/
+.expo-shared/
+dist/
+web-build/
+expo-env.d.ts
+
+# generated native projects and build artifacts
+/ios/
+/android/
+build/
+.kotlin/
+.gradle/
+.cxx/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcarchive/
+*.xcresult/
+*.dSYM/
+*.apk
+*.aab
+*.ipa
+*.orig.*
+*.jks
+*.keystore
+*.p8
+*.p12
+*.pfx
+*.key
+*.pem
+*.mobileprovision
+/credentials.json
+
+# Metro and tool caches
+.metro-health-check*
+.metro-cache/
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+# Python showcase tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# test and coverage output
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+.maestro/tests/
+
+# scratch simulator captures and recordings from the helper scripts
+/sky-gate.png
+/sky-open.png
+/astro-gate.png
+/astro-open.png
+/gate.png
+/mid.png
+/open.png
+/out.mp4
+/out.mov
+/recordings/
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+
+# OS and editor files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+.history/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# scratch files and local shell environments
+*.tmp
+*.temp
+*.bak
+*.orig
+/tmp/
+/temp/
+.direnv/
+.envrc
+
+# local environment files; templates stay committable
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
+
+# local assistant settings, sessions, and worktrees (including nested projects)
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.windsurf/
+.continue/
+.opencode/
+.roo/
+.aider*
+.cursorrules
+.cursorignore
+.cursorindexingignore
+.windsurfrules
+.clinerules
+.roorules
+.mcp.json
+
+# agent instructions and local overrides, at any depth
+AGENTS.md
+agents.md
+AGENTS.override.md
+agents.override.md
+CLAUDE.md
+claude.md
+CLAUDE.local.md
+claude.local.md
+CODEX.md
+codex.md
+GEMINI.md
+gemini.md
+
+# GitHub agent context; keep .github/workflows/ for CI
+/.github/copilot-instructions.md
+/.github/instructions/
+/.github/agents/
+/.github/prompts/
+
+# generated starter/example folder
+/example/

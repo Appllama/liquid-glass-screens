@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Liquid Glass Screens",
+    "slug": "liquid-glass-screens",
+    "description": "Open-source Expo cookbook with two liquid-glass welcome screens driven by one swipe-up glass sphere.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/liquid-glass-icon.png",
+    "scheme": "liquid-glass",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/images/liquid-glass-icon.png",
+      "supportsTablet": false,
+      "bundleIdentifier": "dev.appllama.liquidglass",
+      "appleTeamId": "M89F5A3ZGY"
+    },
+    "android": {
+      "package": "dev.appllama.liquidglass",
+      "adaptiveIcon": {
+        "backgroundColor": "#04060C",
+        "foregroundImage": "./assets/images/liquid-glass-icon.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/images/liquid-glass-favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#04060C"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

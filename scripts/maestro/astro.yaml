@@ -1,0 +1,27 @@
+appId: dev.appllama.liquidglass
+---
+# Cookbook: astro. Open it from the gallery home, let the plume build, work the
+# sphere, and send it back down. The sphere has to grow with the finger, the
+# copy has to leave and come back, and the plume has to leave the way the
+# theme says it does.
+- launchApp
+- evalScript: ${ var t = Date.now(); while (Date.now() - t < 4000) {}; output.a = 1 }
+- tapOn:
+    id: "cookbook-astro"
+- evalScript: ${ var t = Date.now(); while (Date.now() - t < 3500) {}; output.b = 1 }
+- takeScreenshot: astro-gate
+# a slow scrub up and back, so the caustic has time to build
+- swipe: { start: "50%,72%", end: "50%,42%", duration: 900 }
+- evalScript: ${ var t = Date.now(); while (Date.now() - t < 1200) {}; output.c = 1 }
+- swipe: { start: "50%,45%", end: "50%,72%", duration: 800 }
+- evalScript: ${ var t = Date.now(); while (Date.now() - t < 1200) {}; output.d = 1 }
+# the commit
+- swipe: { start: "50%,78%", end: "50%,22%", duration: 620 }
+- evalScript: ${ var t = Date.now(); while (Date.now() - t < 6000) {}; output.e = 1 }
+- takeScreenshot: astro-open
+# a partial pull down that springs back
+- swipe: { start: "50%,47%", end: "56%,64%", duration: 700 }
+- evalScript: ${ var t = Date.now(); while (Date.now() - t < 2500) {}; output.f = 1 }
+# the full return
+- swipe: { start: "50%,47%", end: "50%,80%", duration: 600 }
+- evalScript: ${ var t = Date.now(); while (Date.now() - t < 4000) {}; output.g = 1 }
