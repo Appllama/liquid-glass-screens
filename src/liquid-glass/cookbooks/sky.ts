@@ -3,7 +3,7 @@ import type { CookbookTheme } from '../types';
 /**
  * Cookbook 1 — Sky. A daylight page: a looping cloud video, a chrome-balloon
  * wordmark, travel stickers, and a grey-shaded glass. When the sphere is sent
- * back down the plume lets go and falls out of the page.
+ * back down the plume dips, then floats back up while fading as the dome lands.
  */
 
 const stickers = {

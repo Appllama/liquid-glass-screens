@@ -18,4 +18,5 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run test:dependencies
+      - run: npm run test:motion
       - run: npm audit --audit-level=moderate

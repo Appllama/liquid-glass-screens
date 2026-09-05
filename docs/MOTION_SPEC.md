@@ -71,7 +71,9 @@ The light answers force, not speed.
 
 ### Sky — fall
 
-Released when the sphere is back below `p = 0.35`. Each sticker gets a shove of ±45 pt/s sideways and 40–200 pt/s down and a tumble of ±1.5 rad/s, then gravity at 1500 pt/s² with a 30 pt/s² sway, drag `0.55 ^ dt`, and is retired once it is a sticker-and-a-half below the bottom edge.
+Released when the sphere is back below `p = 0.35`. Each sticker gets a shove of ±45 pt/s sideways and 40–200 pt/s down and a tumble of ±1.5 rad/s, then gravity at 1500 pt/s² with a 30 pt/s² sway and drag `0.55 ^ dt` while the sphere is returning.
+
+Once the dome reaches home (`p ≤ 0.02`, idle mode), gravity stops. The original buoyancy, home attraction, and plume floor take over again, so the stickers drift back upward while opacity decreases by `0.65 /s`. This gives the short dip and fading return. Sky does not keep the vortex's persistent exit flag. Reopening starts a fresh plume from the button.
 
 ### Astro — vortex
 

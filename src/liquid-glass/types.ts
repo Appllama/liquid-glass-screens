@@ -8,7 +8,7 @@ export type LiquidGlassActionPressHandler = (actionId: LiquidGlassActionId) => v
 
 /** How the stickers leave when the sphere is sent back down. */
 export type ReturnMode =
-  /** They let go and fall out through the bottom of the page. */
+  /** They dip, then float back up while fading when the dome reaches home. */
   | 'fall'
   /** They are drawn into the bottom centre in a tightening spiral, shedding stardust. */
   | 'vortex';

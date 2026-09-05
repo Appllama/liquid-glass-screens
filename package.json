@@ -106,8 +106,9 @@
     "ios": "expo run:ios",
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run typecheck && npm run lint && npm run test:dependencies",
-    "test:dependencies": "node --test tests/dependency-compatibility.test.cjs"
+    "verify": "npm run typecheck && npm run lint && npm run test:dependencies && npm run test:motion",
+    "test:dependencies": "node --test tests/dependency-compatibility.test.cjs",
+    "test:motion": "node --test tests/sticker-exit.test.cjs"
   },
   "overrides": {
     "decode-uri-component": "$decode-uri-component",

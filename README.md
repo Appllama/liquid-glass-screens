@@ -57,7 +57,7 @@ The screen works like this:
 - while it is being pushed, a chromatic caustic gathers at its crown and answers the force of the hand;
 - when it lands, the cookbook's stickers surface through the button's own glass, get magnified and split by the lens on the way out, and settle into a plume that keeps breathing above it;
 - the copy comes in with a positional blur wipe, a rotating third line, and a call to action; and
-- dragging it back down grows it again and takes the plume away — falling out of the page in Cookbook 1, drawn into a stardust vortex in Cookbook 2.
+- dragging it back down grows it again and takes the plume away — a short dip followed by an upward fade in Cookbook 1, drawn into a stardust vortex in Cookbook 2.
 
 You can:
 
@@ -73,7 +73,7 @@ The project comes from the product-flow research behind [Appllama](https://appll
 
 | Cookbook | Screen ID | Component | Backdrop | Return | Source | Agent prompt |
 | --- | --- | --- | --- | --- | --- | --- |
-| Cookbook 1 — Sky | <code>sky</code> | <code>SkyGlassWelcome</code> | Looping cloud video | Stickers fall out of the page | [View theme](./src/liquid-glass/cookbooks/sky.ts) | [Copy prompt](#prompt-sky) |
+| Cookbook 1 — Sky | <code>sky</code> | <code>SkyGlassWelcome</code> | Looping cloud video | Stickers dip, float back up, and fade | [View theme](./src/liquid-glass/cookbooks/sky.ts) | [Copy prompt](#prompt-sky) |
 | Cookbook 2 — Astro | <code>astro</code> | <code>AstroGlassWelcome</code> | Two-layer still: stars + horizon glow | Stickers spiral into a stardust vortex | [View theme](./src/liquid-glass/cookbooks/astro.ts) | [Copy prompt](#prompt-astro) |
 
 Both cookbooks render through [`LiquidGlassScreen`](./src/liquid-glass/liquid-glass-screen.tsx). A theme decides the backdrop, the wordmark, the forty sticker slots, the palette, the copy, the blur tint, the lens dispersion, the day-or-night glass tuning, and how the plume leaves.
@@ -313,7 +313,8 @@ The verification command runs:
 
 1. TypeScript with <code>tsc --noEmit</code>;
 2. Expo ESLint; and
-3. dependency compatibility tests for routing, malformed URI input, and Xcode project identifiers.
+3. dependency compatibility tests for routing, malformed URI input, and Xcode project identifiers; and
+4. particle worklet regressions for Sky's fading return and Astro's vortex.
 
 CI also runs <code>npm audit --audit-level=moderate</code>. The scoped security overrides and their compatibility checks are documented in [<code>docs/DEPENDENCIES.md</code>](./docs/DEPENDENCIES.md).
 

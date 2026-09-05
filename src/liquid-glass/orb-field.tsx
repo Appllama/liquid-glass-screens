@@ -16,7 +16,7 @@ import type { ReturnMode } from './types';
  * and settle into a plume that keeps breathing above it. When the sphere is
  * sent back down they leave one of two ways:
  *
- * - `fall`: they let go, tumble, and drop out through the bottom of the page.
+ * - `fall`: they dip, then float back up while fading once the dome is home.
  * - `vortex`: everything is drawn into the bottom centre in a tightening
  *   spiral, faster and faster, shedding stardust as it goes, and vanishes into
  *   the dome — matter falling into a core.
@@ -151,7 +151,9 @@ export function OrbField({
         for (let i = 0; i < N; i++) {
           const b = i * K;
           if (s[b + 5] <= 0) continue;
-          s[b + 18] = 1;
+          // Only the vortex must finish its exit after the sphere reaches home.
+          // Sky returns to its floating forces and fades when mode becomes idle.
+          s[b + 18] = vortex ? 1 : 0;
           if (!vortex) {
             // let go: a shove apart and a first tumble, then gravity does the rest
             s[b + 2] += (Math.random() - 0.5) * 90;
@@ -214,7 +216,7 @@ export function OrbField({
       if (s[b + 5] <= 0) continue;
 
       let vx = s[b + 2], vy = s[b + 3];
-      const out = m === 2 || s[b + 18] > 0;
+      const out = m === 2 || (vortex && s[b + 18] > 0);
 
       if (out && vortex) {
         stillLeaving += 1;
